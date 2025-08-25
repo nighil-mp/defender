@@ -15,7 +15,642 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&amp;display=swap" rel="stylesheet">
+<style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  margin-top: 0;
+}
+
+/* Left menu section */
+.menu-section {
+  display: flex;
+  align-items: center;
+}
+
+/* Menu icon (3 lines) */
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 18px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.menu-icon span {
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+}
+
+/* Menu text */
+.menu-text {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #000;
+}
+
+/* Centered brand text */
+.brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+        /* homepage */
+        #homepage{
+            position:sticky;
+            z-index: 3;
+            margin-top: 0%;
+        }
+        #homepage .homepage{
+            width: 100%;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+        }
+        #homepage .homepageimg{
+            width: 100%;
+        }
+        #homepage .logotext1{
+            filter: invert(100%) sepia() saturate(10000%) hue-rotate(0deg);
+            width: 15%;
+            position: relative;
+            top: -100%;
+            left: 32.5%;
+        }
+        #homepage .logotext2{
+            width: 13%;
+            font-size: 2vw;
+            color: rgb(15, 15, 11);
+            font-family: "Cinzel", serif;
+            position: relative;
+            top: -111.5%;
+            left: 54%;
+        }
+        #homepage .logo{
+            position: relative;
+            top: -121%;
+            width: 5%;
+            left: 48.5%;
+        }
+        #homepage .car{
+            opacity: 1;
+            width: 15%;
+            position: relative;
+            left: 0%;
+            top: -60%;
+            aspect-ratio: 16/9;
+            transition: left 5s ease-in-out, opacity 0.6s ease-in;
+        }
+        #homepage .car .carimg{
+            width: 100%;
+        }
+        
+         #homepage .homepage:hover .car{
+            left: 85%;
+            opacity: 1;
+        }
+        #homepage .button1{
+            background-color: rgba(250, 4, 4, 0.916);
+            color: rgb(8, 8, 8);
+            position: relative;
+            left: 35%;
+            top: -52%;
+            font-size: 2vw;
+            padding:0;
+            border: 2px white ridge;
+            border-radius: 30%;
+            width: 0%;
+            opacity: 0;
+            cursor: pointer;
+            transition: all 0.6s ease-out;
+            transition-delay: 2.5s;
+            height: 5vw;
+        }
+        #homepage .homepage:hover .button1{
+            opacity: 1;
+            width: 15%;
+            padding: 1vw 3vw;
+           
+        }
+        #homepage audio{
+            position: relative;
+            top: -50%;
+        }
+
+
+        /* header */
+        #header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 2;
+        }
+        #header .header{
+            background-color: white;
+            aspect-ratio: 50/1;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 1vw;
+            font-family: "Cinzel", serif;
+        }
+        #header img{
+            width: 100%;
+        }
+        #header .img{
+            width: 1.6%;
+        }
+        #header .sp1{
+            font-size: 1vw;
+            font-weight: 500;
+        }
+        #header .sp2{
+            font-size: 0.8vw;
+        }
+
+
+      
+        /* intro */
+        #intro .intro{
+            width: 100%;
+            aspect-ratio: 16/9;
+            background-image: url(https://cdn.pixabay.com/photo/2016/08/28/22/40/land-rover-1627117_1280.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: space-between;
+            gap: 5%;
+            overflow: hidden;
+        }
+        #intro p{
+            font-family: "Cinzel", serif;
+            padding: 2vw;
+            width: 50%;
+            margin-left: 20%;
+            margin-top: 17%;
+            color: rgb(255, 255, 255);
+            background-color: rgba(0, 0, 0, 0.3);
+            backdrop-filter:blur(8px);
+            text-shadow: 2px 4px 6px black;
+            height: 46%;
+            font-size: 1.5vw;
+            border-radius: 1vw;
+            border: 2px white ridge;
+        }
+        #intro .enzo{
+            width: 25%;
+            margin-right: 5%;
+            margin-top: 18%;
+            border-radius: 1vw;
+            height: 50%;
+        }
+        #intro .dummy{
+            height: 0px;
+            width: 0px;
+        }
+        #intro .dummy h1{
+            font-family: "Cinzel", serif;
+            font-size: 2vw;
+            color: white;
+            position: relative;
+            top: 6vw;
+            left: -57vw;
+            width: 15vw;
+            border-bottom: red 0.4vw ridge;
+            backdrop-filter: blur(10px);
+            text-shadow: 2px 2px 0px black;
+        }
+        #intro button{
+            cursor: pointer;
+            position: fixed;
+            top: 25%;
+            left: 0%;
+            width: 6vw;
+            font-family: "Cinzel", serif;
+            font-weight: 500;
+            height: 2.5vw;
+            border-right: 0.3vw solid black;
+            border-bottom: 0.3vw solid black;
+            border-top: 0.3vw solid black;
+            font-size: 1vw;
+            transition: all 0.3s ease-out;
+        }
+        #intro .intro:hover button{
+            width: 7vw;
+            background-color: grey;
+            color: white;
+            border-right: 0.5vw solid black;
+        }
+
+
+        /* Slides */
+        .slide{
+            width: 100%;
+            aspect-ratio: 16/9;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .slide1{
+            background-image: url(https://cdn.pixabay.com/photo/2017/09/13/23/32/car-2747491_1280.jpg);
+        }
+        .slide2{
+            background-image: url(https://cdn.pixabay.com/photo/2017/08/22/22/27/land-rover-2670731_1280.jpg);
+        }
+        .slide3{
+            background-image: url(https://cdn.pixabay.com/photo/2018/01/26/13/34/vehicle-3108707_1280.jpg);
+        }
+        .slide4{
+            background-image: url(https://cdn.pixabay.com/photo/2017/12/07/18/05/land-rover-3004270_1280.jpg);
+        }
+        .slide5{
+            background-image: url(https://cdn.pixabay.com/photo/2018/03/26/15/11/all-terrain-vehicle-3262924_1280.jpg);
+        }
+        
+        .slide .leftbutton{
+            cursor: pointer;
+            position: fixed;
+            top: 14.8vw;
+            left: 0%;
+            width: 6vw;
+            font-family: "Cinzel", serif;
+            font-weight: 500;
+            height: 2.5vw;
+            border-right: 0.3vw solid black;
+            border-bottom: 0.3vw solid black;
+            border-top: 0.3vw solid black;
+            font-size: 1vw;
+            transition: all 0.3s ease-out;
+        }
+        .slide2 .leftbutton{
+            top: 17.3vw;
+        }
+        .slide3 .leftbutton{
+            top: 19.8vw;
+        }
+        .slide4 .leftbutton{
+            top: 22.3vw;
+        }
+        .slide5 .leftbutton{
+            top: 24.8vw;
+        }
+        .slide6 .leftbutton{
+            top: 27.3vw;
+        }
+        .slide7 .leftbutton{
+            top: 29.8vw;
+        }
+        .slide8 .leftbutton{
+            top: 32.3vw;
+        }
+        .slide9 .leftbutton{
+            top: 34.8vw;
+        }
+        .slide10 .leftbutton{
+            top: 37.3vw;
+        }
+        .slide:hover .leftbutton{
+            width: 7vw;
+            background-color: grey;
+            color: white;
+            border-right: 0.5vw solid black;
+        }
+
+        .slide .heading{
+            color: white;
+            font-family: "Cinzel", serif;
+            font-size: 2vw;
+            position: relative;
+            top: 6vw;
+            left: 45.5vw;
+            padding: 0vw 2vw;
+            width: 5vw;
+            border-bottom: red 0.4vw ridge;
+            backdrop-filter: blur(10px);
+            text-shadow: 2px 2px 0px black;
+            opacity: 0;
+            transition: all 0.3s ease-out;
+        }
+        .slide .body{
+            position: relative;
+            top: 10vw;
+            left: 27.5%;
+            font-family: "Cinzel", serif;
+            color: rgb(255, 255, 255);
+            background-color: rgba(0, 0, 0, 0.3);
+            backdrop-filter:blur(8px);
+            text-shadow: 2px 4px 6px black;
+            font-size: 1vw;
+            border-radius: 1vw;
+            border: 2px white ridge;
+            width: 45%;
+            text-align: center;
+            padding: 1vw;
+            opacity: 0;
+            transition: all 0.3s ease-out;
+        }
+        .slide:hover .body{
+            opacity: 1;
+        }
+        .slide:hover .heading{
+            opacity: 1;
+        }
+
+         /* end */
+         #end{
+            position:sticky;
+            z-index: 3;
+        }
+        #end .homepage{
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #end .homepageimg{
+            width: 100%;
+        }
+        #end .logotext1{
+            filter: invert(100%) sepia() saturate(10000%) hue-rotate(0deg);
+            width: 15%;
+            position: relative;
+            top: -100%;
+            left: 32.5%;
+        }
+        #end .logotext2{
+            width: 13%;
+            font-size: 2vw;
+            color: yellow;
+            font-family: "Cinzel", serif;
+            position: relative;
+            top: -111.5%;
+            left: 54.5%;
+        }
+        #end .logo{
+            position: relative;
+            top: -121%;
+            width: 5%;
+            left: 48.5%;
+        }
+        #end .car{
+            opacity: 1;
+            width: 15%;
+            position: relative;
+            left: 85%;
+            top: -68%;
+            aspect-ratio: 16/9;
+            transform: rotateY(180deg);
+            transition: left 5s ease-in-out, opacity 0.6s ease-in;
+        }
+        #end .car .carimg{
+            width: 100%;
+        }
+        /* #end .wheel1{
+            width: 13%;
+            position: absolute;
+            bottom: 49%;
+            left: 72.5%;
+            transition: all 5s ease-in-out;
+            z-index: 1;
+        }
+        #end .wheel2{
+            width: 13%;
+            position: absolute;
+            bottom: 49.5%;
+            left: 9.97%;
+            transition: all 5s ease-in-out;
+            z-index: 1;
+        }
+        #end .wheelbase1{
+            position: absolute;
+            bottom: 48.5%;
+            left: 72.5%;
+            width: 13.8%;
+        }
+        #end .wheelbase2{
+            position: absolute;
+            bottom: 49%;
+            left: 9.8%;
+            width: 14%;
+        }
+        #end .homepage:hover .wheel1{
+            transform: rotate(2300deg);
+        }
+        #end .homepage:hover .wheel2{
+            transform: rotate(2300deg);
+        } */
+        #end .homepage:hover .car{
+            left: 0%;
+            opacity: 1;
+        }
+        #end .button1{
+            background-color: rgba(255, 0, 0, 0);
+            color: white;
+            position: absolute;
+            right: 42.5%;
+            /* left: 35%; */
+            top: 82%;
+            font-size: 2vw;
+            padding:0;
+            border: 2px white ridge;
+            border-radius: 0.5vw;
+            width: 0%;
+            opacity: 0;
+            cursor: pointer;
+            transition: all 0.6s ease-out;
+            transition-delay: 2.5s;
+            height: 5vw;
+        }
+        #end .homepage:hover .button1{
+            opacity: 1;
+            width: 15%;
+            padding: 1vw 3vw;
+        }
+
+
+        /* Scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+    transition: all 0.6s;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: black; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 0, 0);
+    border-radius:20px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background:yellow; 
+    cursor:pointer;
+  }
+
+  ::-webkit-scrollbar:hover{
+    width: 12px;
+  }
+
+
+        @media screen and (max-width:500px) {
+
+            #header .sp1{
+            font-size: 3vw;
+            }
+            #header .sp2{
+                font-size: 2.5vw;
+            }
+            #header .header{
+                aspect-ratio: 20/1;
+            }
+            #header .img{
+                width: 4%;
+                padding-top: 1vw;
+            }
+
+             /* intro */
+            #intro .intro{
+                background-size:contain;
+            }
+            #intro p{
+                width: 60%;
+                margin-left: 20%;
+                margin-top: 15%;
+                font-size: 2vw;
+                overflow-y: scroll;
+            }
+            #intro .dummy h1{
+                font-size: 3vw;
+                left: -62vw;
+                width: 22vw;
+            }
+            #intro button{
+                top: 42.8%;
+                width: 12vw;
+                height: 1.8%;
+                font-size: 2vw;
+            }
+            #intro .intro:hover button{
+                width: 14vw;
+                border-right: 1vw solid black;
+            }
+            .slide{
+                background-size: contain;
+            }
+
+            .slide .leftbutton{
+                top:44.6%;
+                left: 0%;
+                width: 12vw;
+                height: 1.8%;
+                font-size: 2vw;
+            }
+            .slide2 .leftbutton{
+                top: 46.4%;
+            }
+            .slide3 .leftbutton{
+                top: 48.2%;
+            }
+            .slide4 .leftbutton{
+                top: 50%;
+            }
+            .slide5 .leftbutton{
+                top: 51.8%;
+            }
+            .slide6 .leftbutton{
+                top: 53.6%;
+            }
+            .slide7 .leftbutton{
+                top: 55.4%;
+            }
+            .slide8 .leftbutton{
+                top: 57.2%;
+            }
+            .slide9 .leftbutton{
+                top: 59%;
+            }
+            .slide10 .leftbutton{
+                top: 60.8%;
+            }
+            .slide:hover .leftbutton{
+                width: 14vw;
+                border-right: 1vw solid black;
+            }
+            .slide .heading{
+                font-size: 3vw;
+                left: 46vw;
+                width: 8vw;
+            }
+            .slide .body{
+                position: relative;
+                top: 10vw;
+                left: 27.5%;
+                font-size: 1.5vw;
+                width: 45%;
+                height: 8vw;
+                overflow-y: scroll;
+            }
+            .slide:hover .body{
+                opacity: 1;
+            }
+            .slide:hover .heading{
+                opacity: 1;
+            }
+            #end .homepage{
+                width: 100%;
+                height: 56.25vw;
+                overflow: hidden;
+            }
+            #end .car{
+                opacity: 1;
+                width: 15%;
+                position: relative;
+                left: 85%;
+                top: -57%;
+                aspect-ratio: 16/9;
+                transform: rotateY(180deg);
+                transition: left 5s ease-in-out, opacity 0.6s ease-in;
+            }
+
+
+        }
+</style>
 
 
 </head>
